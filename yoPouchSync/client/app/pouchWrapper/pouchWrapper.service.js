@@ -4,10 +4,10 @@
   /* Reference the module for this program */
   angular.module('yoPouchSyncApp')
     /* Add the dataWrapper factory */
-    .factory('dataWrapper',
+    .factory('pouchWrapper',
     /* Specify the operands as strings, so minification for production won't change the names */
-    ['$rootScope', 'myPouchDB', 'util',
-      function ($rootScope, myPouchDB, util) {
+    ['$rootScope', 'myPouchDB', '$q',
+      function ($rootScope, myPouchDB, $q) {
 
         /* Create an array for storing the data */
         var data = [];
@@ -16,7 +16,25 @@
         myPouchDB.changes({live: true})
           .on('change', handleUpdate);
 
-        /* Process changes to the myPouch database */
+        /* Utility function for calling $apply to update the DOM  */
+        /* on resolution of a promise */
+        function resolve(value) {
+          /* Ensure the DOM is updated due to an external change */
+          $rootScope.$apply(function () {
+            return $q.when(value);
+          });
+        }
+
+        /* Utility function for calling $apply to update the DOM */
+        /* on rejection of a promise */
+        function reject(error) {
+          /* Ensure the DOM is updated due to an external change */
+          $rootScope.$apply(function () {
+            return $q.reject(error);
+          });
+        }
+
+        /* process changes to the mypouch database */
         function handleUpdate(change) {
           console.log("handleUpdate: change=", change);
           /* See if this is a add/change operation or a delete */
@@ -72,8 +90,8 @@
           console.log("addPouch: doc=", doc);
           /* Post the document generating a random _id */
           return myPouchDB.post(doc)
-            .then(util.resolve)
-            .catch(util.reject);
+            .then(resolve)
+            .catch(reject);
         }
 
         /* remove a document from the database */
@@ -84,10 +102,10 @@
             .then(function (resultDoc) {
               /* Remove the document */
               return myPouchDB.remove(resultDoc)
-                .then(util.resolve)
-                .catch(util.reject);
+                .then(resolve)
+                .catch(reject);
             })
-            .catch(util.reject);
+            .catch(reject);
         }
 
         function updatePouch(updateDoc) {
@@ -97,10 +115,10 @@
             .then(function (resultDoc) {
               /* Replace the current rev of the document, with the new document */
               return myPouchDB.put(updateDoc, updateDoc._id, resultDoc._rev)
-                .then(util.resolve)
-                .catch(util.reject);
+                .then(resolve)
+                .catch(reject);
             })
-            .catch(util.reject);
+            .catch(reject);
         }
 
         return {

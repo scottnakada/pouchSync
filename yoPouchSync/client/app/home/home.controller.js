@@ -3,10 +3,10 @@
 
   angular.module('yoPouchSyncApp')
     .controller('HomeCtrl',
-    ['$scope', 'dataWrapper',
-      function ($scope, dataWrapper) {
+    ['$scope', 'pouchWrapper',
+      function ($scope, pouchWrapper) {
 
-        $scope.grocery = dataWrapper.data;
+        $scope.grocery = pouchWrapper.data;
 
         $scope.submit = function () {
           console.log("submit: text='" + $scope.text + "'");
@@ -15,7 +15,7 @@
               type: 'grocery',
               text: $scope.text
             };
-          dataWrapper.add(doc).then(function (res) {
+          pouchWrapper.add(doc).then(function (res) {
             $scope.text = '';
           })
             .catch(function (reason) {
@@ -24,14 +24,14 @@
         };
 
         $scope.remove = function (groceryItem) {
-          dataWrapper.remove(groceryItem)
+          pouchWrapper.remove(groceryItem)
             .catch(function (reason) {
               console.log(reason);
             });
         };
 
         $scope.update = function (groceryItem) {
-          dataWrapper.update(groceryItem)
+          pouchWrapper.update(groceryItem)
             .catch(function (reason) {
               console.log("Problem updating database: ", reason);
             });
