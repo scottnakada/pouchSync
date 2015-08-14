@@ -1,0 +1,35 @@
+<div class="col-md-12">
+  <h1>Grocery List</h1>
+
+  <input type="text" placeholder="What do you need from the grocery store"
+         ng-model="text"
+         ng-keyup="$event.keyCode == 13 ? submit() : null"/>
+  <br><br>
+  <table ng-show="grocery.length>0">
+    <thead>
+    <tr>
+      <th>Grocery Item</th>
+      <th>&nbsp;&nbsp;&nbsp;</th>
+      <th>Delete</th>
+      <th>&nbsp;&nbsp;&nbsp;</th>
+      <th>Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in grocery" ng-cloak>
+      <td>
+        <input type="text" ng-model='item.text'>
+      </td>
+      <td></td>
+      <td>
+        <button ng-click="remove(item)">Delete</button>
+      </td>
+      <td></td>
+      <td>
+        <button ng-click="update(item)">Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
