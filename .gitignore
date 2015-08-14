@@ -1,6 +1,7 @@
 yoPouchSync/node_modules/
 yoPouchSync/client/bower_components/
 yoPouchSync/*.log
-
 yoPouchSync/build/
+yoPouchSync/.tmp/*
+
 .idea/*
