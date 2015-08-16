@@ -1,0 +1,49 @@
+<ion-view view-title="Home">
+    <ion-content class="padding">
+        <h1>Grocery List</h1>
+        <label class="item item-input">
+            <input type="text" placeholder="Grocery Item"
+                   ng-model="groceryItem.text"
+                   ng-keyup="$event.keyCode == 13 ? submit() : null">
+        </label>
+        <br><br>
+
+        <div class="card" ng-show="grocery.length>0">
+
+            <div class="item item-divider">
+                <ion-header-bar class="bar-balanced">
+                    <button class="button button-icon icon ion-ios-minus-outline item-button-left"
+                            ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+                    <h3 class="title">List</h3>
+
+                    <button class="button item-button-right"
+                            ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+                        Reorder
+                    </button>
+                </ion-header-bar>
+            </div>
+
+            <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+                <ion-item ng-repeat="item in grocery" class="item item-button-right">
+
+                    <input type="text" ng-model='item.text' placeholder="{{item.text}}">
+
+                    <button class="button button-positive" ng-click="update(item)"
+                            ng-hide="data.showDelete || data.showReorder">
+                        <i class="icon ion-edit"></i>
+                    </button>
+                    <!--<button class="button button-positive" ng-click="remove(item)">
+                        <i class="icon ion-ios-trash"></i>
+                    </button>-->
+                    <ion-delete-button class="ion-minus-circled" ng-click="remove(item)"></ion-delete-button>
+                    <!--<button ng-click="update(item)">Update</button>-->
+                    <ion-reorder-button class="ion-navicon"
+                                        on-reorder="moveItem(item, $fromIndex, $toIndex)">
+                    </ion-reorder-button>
+                </ion-item>
+            </ion-list>
+        </div>
+
+    </ion-content>
+</ion-view>

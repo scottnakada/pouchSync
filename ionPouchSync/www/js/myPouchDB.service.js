@@ -1,7 +1,7 @@
 (function () { // IIFE to isolate scope
   'use strict';
 
-  angular.module('yoPouchSyncApp')
+  angular.module('starter')
     .factory('myPouchDB', function () {
 
       /* Create a pouch DB database in local storage */
