@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Github Intro Page for Grocery List Apps">
+    <meta name="author" content="Scott M. Nakada">
+
+    <title>Github Intro Page for Grocery List Apps</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- Angular Custom JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+</head>
+
+<body data-ng-app="gitTemplate" data-ng-controller="MainCtrl">
+
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-blue btn-lg pull-right toggle">
+            <i class="fa fa-times"></i>
+        </a>
+        <li class="sidebar-brand">
+            <a href="#top" onclick=$("#menu-close").click();>Grocery List</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick=$("#menu-close").click();>About</a>
+        </li>
+        <li>
+            <a href="#ios" onclick=$("#menu-close").click();>Apple</a>
+        </li>
+        <li>
+            <a href="#platform" onclick=$("#menu-close").click();>Platforms</a>
+        </li>
+        <li>
+            <a href="#technologies" onclick=$("#menu-close").click();>Technologies</a>
+        </li>
+        <li>
+            <a href="#tools" onclick=$("#menu-close").click();>Tools</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Grocery List App</h1>
+
+        <h3>Sync a Grocery List across multiple devices/web apps</h3>
+
+        <h2>Github Links</h2>
+        <a href="github-windows://openRepo/https://github.com/scottnakada/pouchSync" class="btn btn-blue"
+           title="Save scottnakada/pouchSync to your computer and use it in GitHub Desktop."
+           aria-label="Save scottnakada/pouchSync to your computer and use it in GitHub Desktop.">
+            <span class="octicon octicon-desktop-download"></span>
+            Clone in Desktop
+        </a>
+
+        <a href="/scottnakada/pouchSync/archive/master.zip"
+           class="btn btn-blue"
+           aria-label="Download the contents of scottnakada/pouchSync as a zip file"
+           title="Download the contents of scottnakada/pouchSync as a zip file"
+           rel="nofollow">
+            <span class="octicon octicon-cloud-download"></span>
+            Download ZIP
+        </a>
+
+        <h2>Platforms</h2>
+
+        <div class="row">
+            <a data-ng-href="{{web.link}}">
+                <img data-ng-src="{{details.web.image}}" height="75px" data-ng-show="platforms.web"/>
+            </a>
+            <a data-ng-href="{{android.link}}">
+                <img data-ng-src="{{details.android.image}}" height="75px" data-ng-show="platforms.android"/>
+            </a>
+            <a data-ng-href="{{ios.link}}">
+                <img data-ng-src="{{details.ios.image}}" height="75px" data-ng-show="platforms.ios"/>
+            </a>
+            <a data-ng-href="{{details.arduino.link}}">
+                <img data-ng-src="{{details.arduino.image}}" height="75px" data-ng-show="platforms.arduino"/>
+            </a>
+            <a data-ng-href="{{details.raspberryPi.link}}">
+                <img data-ng-src="{{details.raspberryPi.image}}" height="75px" data-ng-show="platforms.raspberryPi"/>
+            </a>
+            <a data-ng-href="{{details.intelEdison.link}}">
+                <img data-ng-src="{{details.intelEdison.image}}" height="75px" data-ng-show="platforms.intelEdison"/>
+            </a>
+        </div>
+
+        <h2>Technologies</h2>
+
+        <div class="row">
+            <a data-ng-href="{{details.html5.link}}">
+                <img data-ng-src="{{details.html5.image}}" height="75px" data-ng-show="technologies.html5"/>
+            </a>
+            <a data-ng-href="{{details.css3.link}}">
+                <img data-ng-src="{{details.css3.image}}" height="75px" data-ng-show="technologies.css3"/>
+            </a>
+            <a data-ng-href="{{details.javascript.link}}">
+                <img data-ng-src="{{details.javascript.image}}" height="75px" data-ng-show="technologies.javascript"/>
+            </a>
+            <a data-ng-href="{{details.jQuery.link}}">
+                <img data-ng-src="{{details.jQuery.image}}" height="75px" data-ng-show="technologies.jQuery"/>
+            </a>
+            <a data-ng-href="{{details.jQueryMobile.link}}">
+                <img data-ng-src="{{details.jQueryMobile.image}}" height="75px"
+                     data-ng-show="technologies.jQueryMobile"/>
+            </a>
+            <a data-ng-href="{{details.angularJS.link}}">
+                <img data-ng-src="{{details.angularJS.image}}" height="75px" data-ng-show="technologies.angularJS"/>
+            </a>
+            <a data-ng-href="{{details.bootstrap.link}}">
+                <img data-ng-src="{{details.bootstrap.image}}" height="75px" data-ng-show="technologies.bootstrap"/>
+            </a>
+            <a data-ng-href="{{details.php.link}}">
+                <img data-ng-src="{{details.php.image}}" height="75px" data-ng-show="technologies.php"/>
+            </a>
+            <a data-ng-href="{{details.python.link}}">
+                <img data-ng-src="{{details.python.image}}" height="75px" data-ng-show="technologies.python"/>
+            </a>
+            <a data-ng-href="{{details.nodeJS.link}}">
+                <img data-ng-src="{{details.nodeJS.image}}" height="75px" data-ng-show="technologies.nodeJS"/>
+            </a>
+            <a data-ng-href="{{details.expressJS.link}}">
+                <img data-ng-src="{{details.expressJS.image}}" height="75px" data-ng-show="technologies.expressJS"/>
+            </a>
+            <a data-ng-href="{{details.firebase.link}}">
+                <img data-ng-src="{{details.firebase.image}}" height="75px" data-ng-show="technologies.firebase"/>
+            </a>
+            <a data-ng-href="{{details.pouchDB.link}}">
+                <img data-ng-src="{{details.pouchDB.image}}" height="75px" data-ng-show="technologies.pouchDB"/>
+            </a>
+            <a data-ng-href="{{details.couchDB.link}}">
+                <img data-ng-src="{{details.couchDB.image}}" height="75px" data-ng-show="technologies.couchDB"/>
+            </a>
+            <a data-ng-href="{{details.mongoDB.link}}">
+                <img data-ng-src="{{details.mongoDB.image}}" height="75px" data-ng-show="technologies.mongoDB"/>
+            </a>
+            <a data-ng-href="{{details.mySQL.link}}">
+                <img data-ng-src="{{details.mySQL.image}}" height="75px" data-ng-show="technologies.mySQL"/>
+            </a>
+        </div>
+
+        <h2>Tools</h2>
+
+        <div class="row">
+            <a data-ng-href="{{details.webStorm.link}}">
+                <img data-ng-src="{{details.webStorm.image}}" height="75px" data-ng-show="tools.webStorm"/>
+            </a>
+            <a data-ng-href="{{details.ionic.link}}">
+                <img data-ng-src="{{details.ionic.image}}" height="75px" data-ng-show="tools.ionic"/>
+            </a>
+            <a data-ng-href="{{details.cordova.link}}">
+                <img data-ng-src="{{details.cordova.image}}" height="75px" data-ng-show="tools.cordova"/>
+            </a>
+            <a data-ng-href="{{details.phoneGap.link}}">
+                <img data-ng-src="{{details.phoneGap.image}}" height="75px" data-ng-show="tools.phoneGap"/>
+            </a>
+            <a data-ng-href="{{details.yeoman.link}}">
+                <img data-ng-src="{{details.yeoman.image}}" height="75px" data-ng-show="tools.yeoman"/>
+            </a>
+            <a data-ng-href="{{details.github.link}}">
+                <img data-ng-src="{{details.github.image}}" height="75px" data-ng-show="tools.github"/>
+            </a>
+            <a data-ng-href="{{details.npm.link}}">
+                <img data-ng-src="{{details.npm.image}}" height="75px" data-ng-show="tools.npm"/>
+            </a>
+            <a data-ng-href="{{details.grunt.link}}">
+                <img data-ng-src="{{details.grunt.image}}" height="75px" data-ng-show="tools.grunt"/>
+            </a>
+            <a data-ng-href="{{details.bower.link}}">
+                <img data-ng-src="{{details.bower.image}}" height="75px" data-ng-show="tools.bower"/>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <h1>Grocery List App</h1>
+
+        <h2>Problems</h2>
+        <ol>
+            <li>Without a database, your data is not persistent</li>
+            <li>If you store data in remote database to get persistance; but you can't do anything if the network
+                goes down.
+            </li>
+            <li>If you store the data in local storage, to get persistance, and can work without a network; but
+                you have multiple copies of your database on each browser, on each computer, or device which
+                accesses the data
+            </li>
+        </ol>
+        <h2>Solution</h2>
+        <ol>
+            <li>Pouch DB allows you to organize and store your data in local storage for persistance, and the
+                ability to work offline, on devices or different browsers/computers.
+            </li>
+            <li>Couch DB (using Cloudant for free server space), allows for a network accessible common database
+                for syncing all devices/browsers/computers
+            </li>
+            <li>This program uses the automatic syncing capabilities of Pouch DB, and Couch DB to allow
+                synchronization of multiple databases across multiple devices/browsers/computers to come in sync
+                when they are connected together on the network.
+            </li>
+        </ol>
+        <h2>What it does</h2>
+
+        <p>Couch DB (on Cloudant), acts as a central repository for your shared data. A pouch DB instance
+            on each web-page, allows local storage of data on each browser/computer/device, if you aren't connected
+            to the Couch DB database on the network. The next time you are connected to the Couch DB database on
+            the network, the software will automatically sync the databases, so they are consistent.</p>
+
+        <p>So, for instance, suppose you had an instance of this application open on Chrome, another on Firefox,
+            and another version on a mobile device, as well as a central repository on Couch DB (Cloudant). If
+            all of the versions were connected to the network to the Couch DB database, each instance of the
+            program would have an exact copy of the Couch DB database stored in the local Pouch DB database
+            in local storage. If you were to add a record on the Chrome instance of the app, it would update
+            the local storage Pouch DB database. This would trigger an automatic sync with the Couch DB database
+            on the network, and this would then trigger automatic updates on the instances running on Firefox, as
+            well as the mobile device. Since, this program is using Angular JS; which already supports two way
+            data binding, this is an example of six way data binding.</p>
+        <ul>
+            <li>Two Way data binding - HTML View and $scope in angular is kept in sync</li>
+            <li>Three Way data binding - Above, plus kept in sync with local Chrome Pouch DB</li>
+            <li>Four Way data binding - Above, plus kept in sync with remote Couch DB (Cloudant)</li>
+            <li>Five Way data binding - Above, plus kept in sync with Firefox Pouch DB local storage</li>
+            <li>Six Way data binding - Above, plus kept in sync with an Android App Pouch DB instance</li>
+        </ul>
+        <p>If the network is not available to your mobile device, the local pouch DB database allows
+            you to modify a local copy of the database. Then, when your device is reconnected to the
+            network (couch DB database), it will automatically sync the databases, and these changes will
+            be distributed to all of the other instances that are online.</p>
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- iOS -->
+<section id="ios" class="ios bg-primary">
+    <div class="container">
+        <h1>Running the App on Apple Devices, using Ionic View</h1>
+
+        <h2>
+            <ol>
+                <li>Load the Ionic View App from the App Store</li>
+                <br><img src="images/AppleAppStore.png" width="75%"><br><br>
+                <li>Start Ionic View</li>
+                <br><img src="images/AppleIonicView.png" width="75%"><br><br>
+                <li>Select "Preview a Shared App"</li>
+                <br><img src="images/ApplePreivewApp.png" width="75%"><br><br>
+                <li>Enter the code for this App {{ios.ionicViewId}}, click "Load App"</li>
+                <br><img src="images/AppleAppRunning.png" width="75%"><br><br>
+            </ol>
+        </h2>
+        <!-- /.container -->
+</section>
+
+<!-- Platforms -->
+<section id="platform" class="platform">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Platforms</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.web">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.web.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.web.name}}</strong>
+                            </h4>
+
+                            <p>{{details.web.info}}</p>
+                            <a data-ng-href="{{details.web.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.android">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.android.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.android.name}}</strong>
+                            </h4>
+
+                            <p>{{details.android.info}}</p>
+                            <a data-ng-href="{{details.android.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.ios">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.ios.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.ios.name}}</strong>
+                            </h4>
+
+                            <p>{{details.ios.info}}</p>
+                            <a data-ng-href="{{details.ios.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.arduino">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.arduino.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.arduino.name}}</strong>
+                            </h4>
+
+                            <p>{{details.arduino.info}}</p>
+                            <a data-ng-href="{{details.arduino.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.raspberryPi">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.raspberryPi.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.raspberryPi.name}}</strong>
+                            </h4>
+
+                            <p>{{details.raspberryPi.info}}</p>
+                            <a data-ng-href="{{details.raspberryPi.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.intelEdison">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.intelEdison.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.intelEdison.name}}</strong>
+                            </h4>
+
+                            <p>{{details.intelEdison.info}}</p>
+                            <a data-ng-href="{{details.intelEdison.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Technologies -->
+<section id="technologies" class="technology bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Technologies</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.html5">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.html5.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.html5.name}}</strong>
+                            </h4>
+
+                            <p>{{details.html5.info}}</p>
+                            <a data-ng-href="{{details.html5.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.css3">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.css3.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.css3.name}}</strong>
+                            </h4>
+
+                            <p>{{details.css3.info}}</p>
+                            <a data-ng-href="{{details.css3.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.javascript">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.javascript.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.javascript.name}}</strong>
+                            </h4>
+
+                            <p>{{details.javascript.info}}</p>
+                            <a data-ng-href="{{details.javascript.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQuery">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQuery.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.jQuery.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQuery.info}}</p>
+                            <a data-ng-href="{{details.jQuery.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQueryMobile">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQueryMobile.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.jQueryMobile.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQueryMobile.info}}</p>
+                            <a data-ng-href="{{details.jQueryMobile.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.angularJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.angularJS.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.angularJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.angularJS.info}}</p>
+                            <a data-ng-href="{{details.angularJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.bootstrap">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.bootstrap.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.bootstrap.name}}</strong>
+                            </h4>
+
+                            <p>{{details.bootstrap.info}}</p>
+                            <a data-ng-href="{{details.bootstrap.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.php">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.php.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.php.name}}</strong>
+                            </h4>
+
+                            <p>{{details.php.info}}</p>
+                            <a data-ng-href="{{details.php.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.python">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.python.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.python.name}}</strong>
+                            </h4>
+
+                            <p>{{details.python.info}}</p>
+                            <a data-ng-href="{{details.python.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.nodeJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.nodeJS.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.nodeJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.nodeJS.info}}</p>
+                            <a data-ng-href="{{details.nodeJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.expressJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.expressJS.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.expressJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.expressJS.info}}</p>
+                            <a data-ng-href="{{details.expressJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.firebase">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.firebase.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.firebase.name}}</strong>
+                            </h4>
+
+                            <p>{{details.firebase.info}}</p>
+                            <a data-ng-href="{{details.firebase.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.pouchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.pouchDB.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.pouchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.pouchDB.info}}</p>
+                            <a data-ng-href="{{details.pouchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.couchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.couchDB.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.couchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.couchDB.info}}</p>
+                            <a data-ng-href="{{details.couchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mongoDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mongoDB.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.mongoDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mongoDB.info}}</p>
+                            <a data-ng-href="{{details.mongoDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mySQL">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mySQL.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.mySQL.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mySQL.info}}</p>
+                            <a data-ng-href="{{details.mySQL.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Tools -->
+<section id="tools" class="tools">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Tools</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.webStorm">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.webStorm.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.webStorm.name}}</strong>
+                            </h4>
+
+                            <p>{{details.webStorm.info}}</p>
+                            <a data-ng-href="{{details.webStorm.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.ionic">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.ionic.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.ionic.name}}</strong>
+                            </h4>
+
+                            <p>{{details.ionic.info}}</p>
+                            <a data-ng-href="{{details.ionic.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.cordova">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.cordova.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.cordova.name}}</strong>
+                            </h4>
+
+                            <p>{{details.cordova.info}}</p>
+                            <a data-ng-href="{{details.cordova.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.phoneGap">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.phoneGap.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.phoneGap.name}}</strong>
+                            </h4>
+
+                            <p>{{details.phoneGap.info}}</p>
+                            <a data-ng-href="{{details.phoneGap.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.yeoman">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.yeoman.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.yeoman.name}}</strong>
+                            </h4>
+
+                            <p>{{details.yeoman.info}}</p>
+                            <a data-ng-href="{{details.yeoman.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.github">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.github.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.github.name}}</strong>
+                            </h4>
+
+                            <p>{{details.github.info}}</p>
+                            <a data-ng-href="{{details.github.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.npm">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.npm.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.npm.name}}</strong>
+                            </h4>
+
+                            <p>{{details.npm.info}}</p>
+                            <a data-ng-href="{{details.npm.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.grunt">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.grunt.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.grunt.name}}</strong>
+                            </h4>
+
+                            <p>{{details.grunt.info}}</p>
+                            <a data-ng-href="{{details.grunt.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="tools.bower">
+                        <div class="tools-item">
+                            <img data-ng-src="{{details.bower.image}}" height="75px"/>
+                            <h4>
+                                <strong>{{details.bower.name}}</strong>
+                            </h4>
+
+                            <p>{{details.bower.info}}</p>
+                            <a data-ng-href="{{details.bower.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Quickstart Prototypes</strong>
+                </h4>
+
+                <p>9304 Galvin Avenue</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (760)-583-8366</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:scottnakada@gmail.com">scottnakada@gmail.com</a>
+                    </li>
+                </ul>
+                <!--                <br>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                                    </li>
+                                </ul>-->
+                <hr class="small">
+                <p>Copyright &copy; Quickstart Prototypes 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
