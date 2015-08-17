@@ -197,7 +197,7 @@
                     },
                     webStorm: {
                         name: "Web Storm",
-                        image: "images/Webstorm.png",
+                        image: "images/WebsStorm.png",
                         link: "https://www.jetbrains.com/webstorm/",
                         info: "Web Storm is a commercial IDE for JavaScript, CSS & HTML, which provides automatic code completion, on-the-fly code analysis, refactoring support and VCS integration."
                     },
