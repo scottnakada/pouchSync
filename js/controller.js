@@ -17,6 +17,9 @@
                     link: "#ios",
                     ionicViewId: "99cc8cc8"
                 };
+                $scope.github = {
+                    link: "https://github.com/scottnakada/pouchSync"
+                };
 
                 // Customize the Platforms Display
                 $scope.platforms = {
