@@ -18,7 +18,12 @@
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="pouchSync/yoPouchSync/dist/public/app/71c590b0.vendor.css"/>
-  <link rel="stylesheet" href="pouchSync/yoPouchSync/dist/public/app/8a12cf45.app.css"/>
+  <!-- build:css({.tmp,client}) app/app.css -->
+  <link rel="stylesheet" href="pouchSync/yoPouchSync/dist/public/app/8a12cf45.app.css">
+  <!-- injector:css -->
+  <link rel="stylesheet" href="pouchSync/yoPouchSync/dist/public/app/8a12cf45.app.css">
+  <!-- endinjector -->
+  <!-- endbuild -->
 </head>
 
 <body ng-app="yoPouchSyncApp">
@@ -68,13 +73,19 @@
 </script>
 
 <!--[if lt IE 9]>
-<script src="pouchSync/yoPouchSync/dist/public/bower_components/es5-shim/es5-shim.js"></script>
-<script src="pouchSync/yoPouchSync/dist/public/bower_components/json3/lib/json3.min.js"></script>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
-<script src="pouchSync/yoPouchSync/dist/public/app/a409a55e.vendor.js"></script>
+<script src="pouchSync/yoPouchSync/dist/public/app/ab09556f.vendor.js"></script>
 
 
-<script src="pouchSync/yoPouchSync/dist/public/app/c7abb918.app.js"></script>
+<!-- build:js({.tmp,client}) app/app.js -->
+
+<script src="pouchSync/yoPouchSync/dist/public/app/d3201759.app.js"></script>
+<!-- injector:js -->
+
+<!-- endinjector -->
+<!-- endbuild -->
 </body>
 
 </html>
