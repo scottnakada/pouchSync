@@ -59,9 +59,9 @@
                     phoneGap: false,
                     yeoman: true,
                     github: true,
-                    npm: true,
-                    grunt: true,
-                    bower: true
+                    npm: false,
+                    grunt: false,
+                    bower: false
                 };
 
                 // Details, Links, Info
