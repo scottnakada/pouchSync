@@ -8,7 +8,7 @@
       <a href="http://www.amazon.com/Quickstart-Prototypes-Grocery-List/dp/B013ZAWJ5K/ref=sr_1_8?s=mobile-apps&ie=UTF8&qid=1439843260&sr=1-8&keywords=grocery+list">
         <img src="images/AndroidGroceryList.png" width="15%">
       </a>&nbsp;&nbsp;&nbsp;
-      <a href="http://scottnakada.github.io/Penguins/#ios">
+      <a href="http://scottnakada.github.io/pouchSync/#ios">
         <img src="images/iPadGroceryList.png" width="30%">
       </a>
     </center>
