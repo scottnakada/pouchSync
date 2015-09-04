@@ -8,13 +8,16 @@
 
                 // Links to the Platform Apps
                 $scope.web = {
-                    link: "http://scottnakada.github.io/pouchSync/yoPouchSync/dist/public/index.html"
+                    link: "http://scottnakada.github.io/pouchSync/yoPouchSync/dist/public/index.html",
+                    image: "images/LaptopGroceryList.png"
                 };
                 $scope.android = {
-                    link: "http://www.amazon.com/Quickstart-Prototypes-Grocery-List/dp/B013ZAWJ5K/ref=sr_1_8?s=mobile-apps&ie=UTF8&qid=1439843260&sr=1-8&keywords=grocery+list"
+                    link: "http://www.amazon.com/Quickstart-Prototypes-Grocery-List/dp/B013ZAWJ5K/ref=sr_1_8?s=mobile-apps&ie=UTF8&qid=1439843260&sr=1-8&keywords=grocery+list",
+                    image: "images/AndroidGroceryList.png"
                 };
                 $scope.ios = {
                     link: "#ios",
+                    image: "images/iPadGroceryList.png",
                     ionicViewId: "99cc8cc8"
                 };
                 $scope.github = {
